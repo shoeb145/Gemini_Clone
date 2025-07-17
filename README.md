@@ -50,7 +50,7 @@ A Gemini-style conversational AI chat app built with React, Zustand, and Tailwin
 
 ## 🔗 Live Preview
 
-👉 [Live App](gemini-clone-a.netlify.app)  
+👉 [Live App](https://gemini-clone-a.netlify.app)  
 👉 [GitHub Repo](https://github.com/shoeb145/Gemini_Clone)
 
 ---
