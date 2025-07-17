@@ -1,9 +1,10 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 function DashboardPage(props) {
   return (
     <div>
-      <h1>hello</h1>
+      <Navbar />
     </div>
   );
 }
