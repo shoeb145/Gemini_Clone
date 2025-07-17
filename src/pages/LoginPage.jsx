@@ -116,7 +116,6 @@ function LoginPage(props) {
     localStorage.setItem("login", "true");
 
     toast.success("Login successful!");
-    // You can redirect or mark as authenticated here
   };
   console.log(otp);
 
@@ -129,7 +128,7 @@ function LoginPage(props) {
       ) : (
         <div className="min-h-svh bg-base-100">
           <Navbar />
-          <div className=" mx-7 my-3 p-2 rounded-xl  h-full mt-9 bg-base-200">
+          <div className=" mx-7 my-3 p-2 rounded-xl  h-full mt-9 bg-base-200 sm:mx-16 lg:mx-48">
             <div className=" card  ">
               <h2 className="card-title m-2">Sign in to Gemini</h2>
               <div className="card-body h-96">
@@ -137,7 +136,7 @@ function LoginPage(props) {
                   <label className="label">
                     <span>Mobile No:</span>
                   </label>
-                  <div className=" input input-group bg-base-100 bordered rounded-xl flex items-center w-48 pl-3">
+                  <div className=" input input-group bg-base-100 bordered rounded-xl flex items-center w-full max-w-xs pl-3">
                     <details
                       ref={detailsRef}
                       className="dropdown dropdown-bottom dropdown-center relative m-0 p-0 "
@@ -158,13 +157,12 @@ function LoginPage(props) {
                             {selectedCountry.idd.root}
                             {selectedCountry.idd.suffixes[0]}
                           </p>
-                          {/* <a className="p-1">{selectedCountry.cca2}</a> */}
                         </summary>
                       )}
 
                       <ul
                         tabIndex={0}
-                        className="absolute mt-5 w-48 p-2 left-1/2 transform -translate-x-1/2 dropdown-content menu bg-base-100  z-1  h-28  py-2 flex flex-row  shadow-sm overflow-y-scroll overflow-x-hidden  pl-3 rounded-xl ml-14  "
+                        className="absolute mt-5 w-48 p-2 left-1/2 transform -translate-x-1/2 dropdown-content menu bg-base-100  z-1  h-48  py-2 flex flex-row  shadow-sm overflow-y-scroll overflow-x-hidden  pl-3 rounded-xl ml-14  "
                       >
                         {countryCode &&
                           countryCode.map((item, key) => (
@@ -181,6 +179,7 @@ function LoginPage(props) {
                                 className="size-6 m-0 p-0 "
                               />
                               <a className="p-0 pl-2">{item.cca2}</a>
+
                               <p>
                                 ({item.idd.root}
                                 {item.idd.suffixes[0]})
@@ -196,7 +195,7 @@ function LoginPage(props) {
                       maxLength={10}
                       disabled={dBtn}
                       {...register("phoneNumber")}
-                      className=" h-9 w-28 ml-4 bg-transparent active:bg-transparent border-none focus:outline-none focus:bg-transparent"
+                      className=" w-full bg-transparent border-none focus:outline-none ml-4"
                     />
                   </div>
                   {errors.phoneNumber && (
@@ -216,7 +215,7 @@ function LoginPage(props) {
                   </div>
                   {dBtn && (
                     <>
-                      <div className="flex justify-center mt-12 mr-1 gap-3">
+                      <div className="flex justify-center mt-12 mr-1 gap-3  sm:gap-4">
                         {otp.map((digit, index) => (
                           <input
                             key={index}
@@ -226,7 +225,7 @@ function LoginPage(props) {
                             value={digit}
                             onChange={(e) => handleChange(e, index)}
                             onKeyDown={(e) => handleKeyDown(e, index)}
-                            className="w-9 h-9 text-center border  rounded-md text-xl"
+                            className="w-9 sm:w-12 h-9 text-center border  rounded-md text-xl"
                           />
                         ))}
                       </div>
