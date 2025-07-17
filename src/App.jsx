@@ -5,6 +5,7 @@ import "./App.css";
 import { Route, Routes } from "react-router";
 import LoginPage from "./pages/LoginPage";
 import DashboardPage from "./pages/DashboardPage";
+import ChatPage from "./pages/ChatPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="dashboard/chat/:id" element={<ChatPage />} />
       </Routes>
     </>
   );
