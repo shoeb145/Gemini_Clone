@@ -4,56 +4,110 @@ A Gemini-style conversational AI chat app built with React, Zustand, and Tailwin
 
 ---
 
-## 🚀 Features
+## 🚀 Live Link
 
-### ✅ 1. Authentication
-
-- OTP-based login/signup with country code picker
-- Country data fetched from **restcountries.com**
-- OTP is simulated using `setTimeout`
-- Form validation using **React Hook Form** + **Zod**
-
-### ✅ 2. Dashboard
-
-- View all your chatrooms
-- Create and delete chatrooms
-- Toast notifications for feedback
-
-### ✅ 3. Chatroom Interface
-
-- Responsive, clean chat UI
-- AI and user messages with timestamps
-- Typing indicator (`Gemini is typing...`)
-- Auto-scroll to the latest message
-- Infinite scroll with client-side pagination (20 messages per page)
-- Image upload support (Base64 preview)
-- Simulated AI response with delay + throttling
-
-### ✅ 4. Global UX
-
-- Dark/light theme toggle
-- Mobile-first responsive design
-- Persistent data using `localStorage`
-- Toasts for key interactions
+🔗 [View Demo](https://gemini-clone-a.netlify.app/)
 
 ---
 
-## 🛠️ Tech Stack
+## ✅ Features Implemented
 
-- **Framework**: React (Vite)
-- **State Management**: Zustand
-- **Form Handling**: React Hook Form + Zod
-- **Styling**: Tailwind CSS + DaisyUI
-- **Notifications**: React Hot Toast
+- 📲 **OTP-based Login**
+
+  - Country code selection from REST API
+  - Simulated OTP send and verification using `setTimeout`
+  - Form validated using **React Hook Form** + **Zod**
+
+- 💬 **Chatroom Interface**
+
+  - Create/Delete chatrooms with confirmation toasts
+  - Chat UI with timestamps and mock AI responses
+  - “Gemini is typing...” indicator with throttled replies
+  - Reverse infinite scroll (pagination: 20 messages per page)
+  - Auto-scroll to latest message
+
+- 🌐 **Global UX**
+  - Mobile responsive layout
+  - Dark mode toggle using **Daisy UI**
+  - All state saved to `localStorage`
+  - Toast notifications on key actions
+  - Keyboard accessible UI
 
 ---
 
-## 🔗 Live Preview
+## 🛠 Tech Stack
 
-👉 [Live App](https://gemini-clone-a.netlify.app)  
-👉 [GitHub Repo](https://github.com/shoeb145/Gemini_Clone)
+- **React**
+- **React Router DOM**
+- **Zustand** – Global state management
+- **React Hook Form** + **Zod** – Form validation
+- **Tailwind CSS + Daisy UI** – Styling
+- **Vite** – Build tool
 
 ---
+
+## 📂 Folder Structure
+
+├── public/
+├── src/
+│ ├── assets/ # Images and static files
+│ ├── components/ # Reusable components like Navbar, Chat UI
+│ ├── lib/ # Zustand stores, utils, validations
+│ ├── pages/ # LoginPage, DashboardPage, ChatPage
+│ ├── stores/ # Zustand state definitions
+│ ├── App.jsx # Main App with Routes
+│ └── main.jsx # Entry point
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+
+yaml
+Copy
+Edit
+
+---
+
+## 🧠 How It Works
+
+### 🔁 Throttling & Typing Indicator
+
+- Fake delay added using `setTimeout` to simulate "Gemini is typing…" before the AI replies.
+
+### 🗂 Pagination (Client-Side)
+
+- Loads 20 messages at a time on scroll up (reverse infinite scroll).
+- Controlled by `page` state and slice logic.
+
+### 📥 Image Upload
+
+- Allows image preview upload in chats using `URL.createObjectURL()`.
+
+### ✅ Form Validation
+
+- Login and input forms validated with **Zod** and **React Hook Form**.
+
+---
+
+## 🧪 Getting Started Locally
+
+1. **Clone the project**
+   ```bash
+   git clone https://github.com/shoeb-145/gemini-clone.git
+   cd gemini-clone
+   Install dependencies
+   ```
+
+bash
+Copy
+Edit
+npm install
+Start development server
+
+bash
+Copy
+Edit
+npm run dev
+Open in browser: http://localhost:5173
 
 ## 📸 Screenshots
 
