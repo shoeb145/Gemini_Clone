@@ -147,9 +147,9 @@ function ChatPage(props) {
           <button
             type="submit"
             onClick={handleClick}
-            className="btn bg-primary w-12 h-12 p-0 flex justify-center items-center"
+            className="btn bg-base-300 w-12 h-12 p-0 flex justify-center items-center"
           >
-            <SendHorizontal className="" />
+            <SendHorizontal className="bg-base " />
           </button>
         </form>
       </div>
