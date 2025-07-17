@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 function ThemeToggle(props) {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "forest");
+  const [iconface, setIconface] = useState(true);
 
   useEffect(() => {
     let theme1 = localStorage.getItem("theme");
